@@ -26,8 +26,8 @@ class App extends Component {
 
   render() {
     const center = {
-      lat: 40.5556 ,
-      lng: 74.3456
+      lat: 40.7128 ,
+      lng: 74.0060
     }
     return (
       <div className="app">
@@ -36,7 +36,7 @@ class App extends Component {
           </div>
           <div className="flats">
             {this.state.flats.map((flat) => {
-              return <Flat flat={flat} />
+              return <Flat key={flat.name} flat={flat} />
             })}
           </div>  
         </div>
@@ -46,7 +46,7 @@ class App extends Component {
               zoom={14}
             >
             {this.state.flats.map((flat) => {
-              return <Marker lat={flat.lat} lng={flat.lng} text={flat.price} />
+              return <Marker key={flat.name} lat={flat.lat} lng={flat.lng} text={flat.price} />
             })}
             </GoogleMapReact>
         </div>

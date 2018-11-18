@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import './marker.css';
 
 class Marker extends Component {
     render(){
