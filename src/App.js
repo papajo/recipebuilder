@@ -12,7 +12,7 @@ class App extends Component {
   }
 
   componentDidMount(){
-    const url = "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/flats.json";
+    const url = "https://raw.githubusercontent.com/papajo/recipebuilder/master/flats-assets/flats.json";
     fetch(url)    //AJAX
       .then(response => response.json())
       .then((data) => {
